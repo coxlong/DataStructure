@@ -1,7 +1,8 @@
 #include <iostream>
-#include "SqList.h"
-#include "LinkList.h"
-#include "CircLinkList.h"
+//#include "SqList.h"
+//#include "LinkList.h"
+//#include "CircLinkList.h"
+#include "DblLinkList.h"
 using namespace std;
 
 template<class T>
@@ -68,9 +69,44 @@ void visit(const T &e)
 //}
 
 //CircLinkList test
+//int main()
+//{
+//	CircLinkList<int> l;
+//	for (int i = 10; i <= 20; i++)
+//		l.Insert(1, i);
+//	l.Traverse(visit);
+//	cout << endl;
+//
+//	int tmp;
+//	l.GetElem(5, tmp);
+//	cout << tmp << endl;
+//
+//	l.Delete(5, tmp);
+//	l.Traverse(visit);
+//	cout << endl;
+//
+//	l.Insert(5, 100);
+//	l.Traverse(visit);
+//	cout << endl;
+//
+//	CircLinkList<int> l2(l);
+//
+//	l2.Traverse(visit);
+//	cout << endl;
+//
+//	l2.Insert(5, 100);
+//	l = l2;
+//	l.Traverse(visit);
+//	cout << endl;
+//
+//	system("pause");
+//	return 0;
+//}
+
+//DblLinkList Test
 int main()
 {
-	CircLinkList<int> l;
+	DblLinkList<int> l;
 	for (int i = 10; i <= 20; i++)
 		l.Insert(1, i);
 	l.Traverse(visit);
@@ -88,7 +124,7 @@ int main()
 	l.Traverse(visit);
 	cout << endl;
 
-	CircLinkList<int> l2(l);
+	DblLinkList<int> l2(l);
 
 	l2.Traverse(visit);
 	cout << endl;

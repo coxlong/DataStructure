@@ -139,8 +139,7 @@ template<class T>
 CircLinkList<T>::CircLinkList(const CircLinkList<T> &copy)
 {
 	head = new Node<T>;
-	head->next = head;
-	Node<T> *tmpPtr = head->next;
+	Node<T> *tmpPtr = head;
 	Node<T> *curPtr = copy.head->next;
 	while (curPtr != copy.head)
 	{
