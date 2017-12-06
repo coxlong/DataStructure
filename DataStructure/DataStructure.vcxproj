@@ -119,6 +119,8 @@
     <ClInclude Include="LinkList.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="SqList.h" />
+    <ClInclude Include="SqStack.h" />
+    <ClInclude Include="Stack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
