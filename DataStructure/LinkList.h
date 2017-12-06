@@ -24,6 +24,9 @@ public:
 
 protected:
 	Node<T> *head;
+	mutable int curPosition;
+	mutable Node<T> *curPtr;
+	int count;
 
 	Node<T> *GetElemPtr(int pos) const;
 };
@@ -31,20 +34,23 @@ protected:
 template<class T>
 Node<T> *LinkList<T>::GetElemPtr(int pos) const
 {
-	Node<T> *tmpPtr = head;
-	int p = 0;
-	while (tmpPtr != NULL&&p < pos)
+	if (curPosition > pos)
 	{
-		tmpPtr = tmpPtr->next;
-		p++;
+		curPosition = 0;
+		curPtr = head;
 	}
-	return tmpPtr;
+	for (; curPosition < pos; curPosition++)
+		curPtr = curPtr->next;
+	return curPtr;
 }
 
 template<class T>
 LinkList<T>::LinkList()
 {
 	head = new Node<T>;
+	curPosition = 0;
+	curPtr = head;
+	count = 0;
 }
 template<class T>
 LinkList<T>::~LinkList()
@@ -55,13 +61,6 @@ LinkList<T>::~LinkList()
 template<class T>
 int LinkList<T>::Length() const
 {
-	int count = 0;
-	Node<T> *tmpPtr = head->next;
-	while (tmpPtr != NULL)
-	{
-		count++;
-		tmpPtr = tmpPtr->next;
-	}
 	return count;
 }
 template<class T>
@@ -79,11 +78,11 @@ void LinkList<T>::Clear()
 template<class T>
 void LinkList<T>::Traverse(void(*visit)(const T &)) const
 {
-	Node<T> *curPtr = head->next;
-	while (curPtr != NULL)
+	Node<T> *cPtr = head->next;
+	while (cPtr != NULL)
 	{
-		(*visit)(curPtr->data);
-		curPtr = curPtr->next;
+		(*visit)(cPtr->data);
+		cPtr = cPtr->next;
 	}
 }
 template<class T>
@@ -122,6 +121,17 @@ bool LinkList<T>::Delete(int position, T &e)
 		e = delPtr->data;
 		tmpPtr->next = delPtr->next;
 		delete delPtr;
+		if (position == Length())
+		{
+			curPosition = 0;
+			curPtr = head;
+		}
+		else
+		{
+			curPosition = position;
+			curPtr = tmpPtr->next;
+		}
+		count--;
 		return true;
 	}
 }
@@ -135,6 +145,9 @@ bool LinkList<T>::Insert(int position, const T &e)
 		Node<T> *tmpPtr = GetElemPtr(position - 1);
 		Node<T> *newPtr = new Node<T>(e, tmpPtr->next);
 		tmpPtr->next = newPtr;
+		curPosition = position;
+		curPtr = newPtr;
+		count++;
 		return true;
 	}
 }
@@ -142,6 +155,9 @@ template<class T>
 LinkList<T>::LinkList(const LinkList<T> &copy)
 {
 	head = new Node<T>;
+	curPosition = 0;
+	curPtr = head;
+	count = copy.count;
 	Node<T> *tmpPtr = head;
 	Node<T> *curPtr = copy.head->next;
 	while (curPtr != NULL)
@@ -157,6 +173,9 @@ LinkList<T> &LinkList<T>::operator=(const LinkList<T> &copy)
 	if (&copy != this)
 	{
 		Clear();
+		curPosition = 0;
+		curPtr = head;
+		count = copy.count;
 		Node<T> *tmpPtr = head;
 		Node<T> *curPtr = copy.head->next;
 		while (curPtr != NULL)

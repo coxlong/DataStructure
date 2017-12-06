@@ -1,8 +1,8 @@
 #include <iostream>
 //#include "SqList.h"
-//#include "LinkList.h"
+#include "LinkList.h"
 //#include "CircLinkList.h"
-#include "DblLinkList.h"
+//#include "DblLinkList.h"
 using namespace std;
 
 template<class T>
@@ -34,39 +34,39 @@ void visit(const T &e)
 //}
 
 //LinkList Test
-//int main()
-//{
-//	LinkList<int> l;
-//	for (int i = 10; i <= 20; i++)
-//		l.Insert(1, i);
-//	l.Traverse(visit);
-//	cout << endl;
-//
-//	int tmp;
-//	l.GetElem(5, tmp);
-//	cout << tmp << endl;
-//
-//	l.Delete(5, tmp);
-//	l.Traverse(visit);
-//	cout << endl;
-//
-//	l.Insert(5, 100);
-//	l.Traverse(visit);
-//	cout << endl;
-//
-//	LinkList<int> l2(l);
-//
-//	l2.Traverse(visit);
-//	cout << endl;
-//
-//	l2.Insert(5, 100);
-//	l = l2;
-//	l.Traverse(visit);
-//	cout << endl;
-//
-//	system("pause");
-//	return 0;
-//}
+int main()
+{
+	LinkList<int> l;
+	for (int i = 10; i <= 20; i++)
+		l.Insert(1, i);
+	l.Traverse(visit);
+	cout << endl;
+
+	int tmp;
+	l.GetElem(5, tmp);
+	cout << tmp << endl;
+
+	l.Delete(5, tmp);
+	l.Traverse(visit);
+	cout << endl;
+
+	l.Insert(5, 100);
+	l.Traverse(visit);
+	cout << endl;
+
+	LinkList<int> l2(l);
+
+	l2.Traverse(visit);
+	cout << endl;
+
+	l2.Insert(5, 100);
+	l = l2;
+	l.Traverse(visit);
+	cout << endl;
+
+	system("pause");
+	return 0;
+}
 
 //CircLinkList test
 //int main()
@@ -104,36 +104,36 @@ void visit(const T &e)
 //}
 
 //DblLinkList Test
-int main()
-{
-	DblLinkList<int> l;
-	for (int i = 10; i <= 20; i++)
-		l.Insert(1, i);
-	l.Traverse(visit);
-	cout << endl;
-
-	int tmp;
-	l.GetElem(5, tmp);
-	cout << tmp << endl;
-
-	l.Delete(5, tmp);
-	l.Traverse(visit);
-	cout << endl;
-
-	l.Insert(5, 100);
-	l.Traverse(visit);
-	cout << endl;
-
-	DblLinkList<int> l2(l);
-
-	l2.Traverse(visit);
-	cout << endl;
-
-	l2.Insert(5, 100);
-	l = l2;
-	l.Traverse(visit);
-	cout << endl;
-
-	system("pause");
-	return 0;
-}
+//int main()
+//{
+//	DblLinkList<int> l;
+//	for (int i = 10; i <= 20; i++)
+//		l.Insert(1, i);
+//	l.Traverse(visit);
+//	cout << endl;
+//
+//	int tmp;
+//	l.GetElem(5, tmp);
+//	cout << tmp << endl;
+//
+//	l.Delete(5, tmp);
+//	l.Traverse(visit);
+//	cout << endl;
+//
+//	l.Insert(5, 100);
+//	l.Traverse(visit);
+//	cout << endl;
+//
+//	DblLinkList<int> l2(l);
+//
+//	l2.Traverse(visit);
+//	cout << endl;
+//
+//	l2.Insert(5, 100);
+//	l = l2;
+//	l.Traverse(visit);
+//	cout << endl;
+//
+//	system("pause");
+//	return 0;
+//}
