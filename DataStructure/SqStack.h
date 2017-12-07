@@ -1,5 +1,5 @@
 
-//À≥–Ú’ª
+//À≥–Ú’ª¿‡ƒ£∞Â
 
 #ifndef _SQSTACK_H_
 #define _SQSTACK_H_

@@ -4,7 +4,9 @@
 //#include "CircLinkList.h"
 //#include "DblLinkList.h"
 //#include "SqStack.h"
-#include "Stack.h"
+//#include "Stack.h"
+//#include "Queue.h"
+#include "SqQueue.h"
 using namespace std;
 
 template<class T>
@@ -176,34 +178,104 @@ void visit(const T &e)
 //}
 
 //Stack test
+//int main()
+//{
+//	Stack<int> s;
+//	for (int i = 10; i <= 20; i++)
+//		s.Push(i);
+//	s.Traverse(visit);
+//	cout << endl;
+//
+//	int tmp;
+//	s.Top(tmp);
+//	cout << tmp << endl;
+//
+//	s.Pop(tmp);
+//	s.Traverse(visit);
+//	cout << endl;
+//
+//	s.Push(100);
+//	s.Traverse(visit);
+//	cout << endl;
+//
+//	Stack<int> s2(s);
+//
+//	s2.Traverse(visit);
+//	cout << endl;
+//
+//	s2.Push(100);
+//	s = s2;
+//	s.Traverse(visit);
+//	cout << endl;
+//
+//	system("pause");
+//	return 0;
+//}
+
+//Queue test
+//int main()
+//{
+//	Queue<int> q;
+//	for (int i = 10; i <= 20; i++)
+//		q.InQueue(i);
+//	q.Traverse(visit);
+//	cout << endl;
+//
+//	int tmp;
+//	q.GetHead(tmp);
+//	cout << tmp << endl;
+//
+//	q.OutQueue(tmp);
+//	q.Traverse(visit);
+//	cout << endl;
+//
+//	q.InQueue(100);
+//	q.Traverse(visit);
+//	cout << endl;
+//
+//	Queue<int> q2(q);
+//
+//	q2.Traverse(visit);
+//	cout << endl;
+//
+//	q2.InQueue(100);
+//	q = q2;
+//	q.Traverse(visit);
+//	cout << endl;
+//
+//	system("pause");
+//	return 0;
+//}
+
+//SqQueue test
 int main()
 {
-	Stack<int> s;
+	SqQueue<int> q;
 	for (int i = 10; i <= 20; i++)
-		s.Push(i);
-	s.Traverse(visit);
+		q.InQueue(i);
+	q.Traverse(visit);
 	cout << endl;
 
 	int tmp;
-	s.Top(tmp);
+	q.GetHead(tmp);
 	cout << tmp << endl;
 
-	s.Pop(tmp);
-	s.Traverse(visit);
+	q.OutQueue(tmp);
+	q.Traverse(visit);
 	cout << endl;
 
-	s.Push(100);
-	s.Traverse(visit);
+	q.InQueue(100);
+	q.Traverse(visit);
 	cout << endl;
 
-	Stack<int> s2(s);
+	SqQueue<int> q2(q);
 
-	s2.Traverse(visit);
+	q2.Traverse(visit);
 	cout << endl;
 
-	s2.Push(100);
-	s = s2;
-	s.Traverse(visit);
+	q2.InQueue(100);
+	q = q2;
+	q.Traverse(visit);
 	cout << endl;
 
 	system("pause");

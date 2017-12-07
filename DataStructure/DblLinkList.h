@@ -1,5 +1,5 @@
 
-//双向链表
+//双向链表类模板
 
 #ifndef _DBLLINKLIST_H_
 #define _DBLLINKLIST_H_

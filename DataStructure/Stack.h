@@ -1,5 +1,5 @@
 
-//链式栈
+//链式栈类模板
 
 #ifndef _STACK_H_
 #define _STACK_H_
