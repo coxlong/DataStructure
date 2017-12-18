@@ -6,7 +6,9 @@
 //#include "SqStack.h"
 //#include "Stack.h"
 //#include "Queue.h"
-#include "SqQueue.h"
+//#include "SqQueue.h"
+//#include "SortTime.h"
+#include "BinTree.h"
 using namespace std;
 
 template<class T>
@@ -248,34 +250,83 @@ void visit(const T &e)
 //}
 
 //SqQueue test
+//int main()
+//{
+//	SqQueue<int> q;
+//	for (int i = 10; i <= 20; i++)
+//		q.InQueue(i);
+//	q.Traverse(visit);
+//	cout << endl;
+//
+//	int tmp;
+//	q.GetHead(tmp);
+//	cout << tmp << endl;
+//
+//	q.OutQueue(tmp);
+//	q.Traverse(visit);
+//	cout << endl;
+//
+//	q.InQueue(100);
+//	q.Traverse(visit);
+//	cout << endl;
+//
+//	SqQueue<int> q2(q);
+//
+//	q2.Traverse(visit);
+//	cout << endl;
+//
+//	q2.InQueue(100);
+//	q = q2;
+//	q.Traverse(visit);
+//	cout << endl;
+//
+//	system("pause");
+//	return 0;
+//}
+
+//Sort test
+//int main()
+//{
+//	int size;
+//
+//
+//	cout << "Num\t" << "Insert\t" << "Shell\t" << "Bubble\t" << "Quick\t" << "Select\t" << "Heap\t" << "Merge\t" << "Radix" << endl;
+//
+//	for (size = 5000; size <= 160000; size *= 2)
+//	{
+//		for (int i = 0; i < 3; i++)
+//		{
+//			SortTime(size);
+//		}
+//	}
+//
+//	system("pause");
+//	return 0;
+//}
+
+//BinTree test
 int main()
 {
-	SqQueue<int> q;
-	for (int i = 10; i <= 20; i++)
-		q.InQueue(i);
-	q.Traverse(visit);
-	cout << endl;
+	int pre[] = { 1,2,4,7,3,5,6 };
+	int in[] = { 4,7,2,1,5,3,6 };
+	BinTree<int> bt = CreateBinTree(pre, in, 7);
+	DisplayBinTree(bt);
 
-	int tmp;
-	q.GetHead(tmp);
-	cout << tmp << endl;
+	cout << "RecurPreOrder: ";
+	bt.RecurPreOrder(visit);
+	cout << endl << "RecurInOrder: ";
+	bt.RecurInOrder(visit);
+	cout << endl << "RecurPostOrder: ";
+	bt.RecurPostOrder(visit);
+	cout << endl << "NonRecurPreOrder: ";
+	bt.PreOrder(visit);
+	cout << endl << "NonRecurInOrder: ";
+	bt.InOrder(visit);
+	cout << endl << "NonRecurPostOrder: ";
+	bt.PostOrder(visit);
 
-	q.OutQueue(tmp);
-	q.Traverse(visit);
-	cout << endl;
-
-	q.InQueue(100);
-	q.Traverse(visit);
-	cout << endl;
-
-	SqQueue<int> q2(q);
-
-	q2.Traverse(visit);
-	cout << endl;
-
-	q2.InQueue(100);
-	q = q2;
-	q.Traverse(visit);
+	cout << endl << "LevelOrder: ";
+	bt.LevelOrder(visit);
 	cout << endl;
 
 	system("pause");
