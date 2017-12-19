@@ -117,7 +117,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AdjMatrixDirGraph.h" />
+    <ClInclude Include="AdjMatrixDirNetwork.h" />
     <ClInclude Include="AdjMatrixUndirGraph.h" />
+    <ClInclude Include="AdjMatrixUndirNetwork.h" />
     <ClInclude Include="BinTree.h" />
     <ClInclude Include="BinTreeNode.h" />
     <ClInclude Include="CircLinkList.h" />

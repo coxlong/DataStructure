@@ -80,5 +80,11 @@
     <ClInclude Include="AdjMatrixUndirGraph.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="AdjMatrixDirNetwork.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AdjMatrixUndirNetwork.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
