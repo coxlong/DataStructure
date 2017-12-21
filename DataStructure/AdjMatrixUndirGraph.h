@@ -1,5 +1,5 @@
 
-//无向图的领接矩阵类模板
+//无向图的邻接矩阵类模板
 
 #ifndef _ADJMATRIXUNDIRGRAPH_H_
 #define _ADJMATRIXUNDIRGRAPH_H_
@@ -206,7 +206,7 @@ AdjMatrixUndirGraph<T> &AdjMatrixUndirGraph<T>::operator=(const AdjMatrixUndirGr
 
 template<class T>
 int AdjMatrixUndirGraph<T>::FirstAdjVex(int v) const
-{//返回顶点v的第一个领接点
+{//返回顶点v的第一个邻接点
 	if (v < 0 || v >= vexNum)
 		return -1;
 	else
@@ -219,7 +219,7 @@ int AdjMatrixUndirGraph<T>::FirstAdjVex(int v) const
 }
 template<class T>
 int AdjMatrixUndirGraph<T>::NextAdjVex(int v1, int v2) const
-{//返回顶点v1相对于v2的下一个领接点
+{//返回顶点v1相对于v2的下一个邻接点
 	if (v1 < 0 || v1 >= vexNum || v2 < 0 || v2 >= vexNum || v1 == v2)
 		return -1;
 	else
@@ -227,7 +227,7 @@ int AdjMatrixUndirGraph<T>::NextAdjVex(int v1, int v2) const
 		for (int i = v2 + 1; i < vexNum; i++)
 			if (Matrix[v1][i] == 1)
 				return i;
-		return -1;	//循环结束，不存在下一个领接点
+		return -1;	//循环结束，不存在下一个邻接点
 	}
 }
 

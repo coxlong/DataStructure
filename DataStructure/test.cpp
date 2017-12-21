@@ -11,7 +11,9 @@
 //#include "BinTree.h"
 //#include "AdjMatrixDirGraph.h"
 //#include "AdjMatrixUndirGraph.h"
-#include "AdjMatrixUndirNetwork.h"
+//#include "AdjMatrixUndirNetwork.h"
+//#include "AdjListDirGraph.h"
+#include "AdjListUndirGraph.h"
 using namespace std;
 
 template<class T>
@@ -411,21 +413,110 @@ void visit(const T &e)
 //}
 
 //AdjMatrixUndirNetwork test
+//int main()
+//{
+//	AdjMatrixUndirNetwork<int, int> g(9);
+//	for (int i = 0; i < 9; i++)
+//		g.SetElem(i, i);
+//	g.InsertEdge(0, 1, 1);
+//	g.InsertEdge(0, 3, 1);
+//	g.InsertEdge(0, 4, 1);
+//	g.InsertEdge(1, 2, 1);
+//	g.InsertEdge(1, 4, 1);
+//	g.InsertEdge(2, 5, 1);
+//	g.InsertEdge(3, 6, 1);
+//	g.InsertEdge(4, 6, 1);
+//	g.InsertEdge(6, 7, 1);
+//	g.InsertEdge(7, 8, 1);
+//	cout << "深度优先遍历：";
+//	g.DFSTraverse(visit);
+//	cout << endl;
+//	cout << "广度优先遍历：";
+//	g.BFSTraverse(visit);
+//	cout << endl;
+//
+//	AdjMatrixUndirNetwork<int, int> g2(g);
+//	cout << "g2深度优先遍历：";
+//	g2.DFSTraverse(visit);
+//	cout << endl;
+//	cout << "g2广度优先遍历：";
+//	g2.BFSTraverse(visit);
+//	cout << endl;
+//
+//	g2.DeleteEdge(0, 1);
+//	g = g2;
+//	cout << "深度优先遍历：";
+//	g.DFSTraverse(visit);
+//	cout << endl;
+//	cout << "广度优先遍历：";
+//	g.BFSTraverse(visit);
+//	cout << endl;
+//
+//	system("pause");
+//	return 0;
+//}
+
+//AdjListDirGraph test
+//int main()
+//{
+//	AdjListDirGraph<int> g(9);
+//	for (int i = 0; i < 9; i++)
+//		g.SetElem(i, i);
+//	g.InsertEdge(0, 1);
+//	g.InsertEdge(0, 3);
+//	g.InsertEdge(0, 4);
+//	g.InsertEdge(1, 2);
+//	g.InsertEdge(1, 4);
+//	g.InsertEdge(2, 5);
+//	g.InsertEdge(3, 6);
+//	g.InsertEdge(4, 6);
+//	g.InsertEdge(6, 7);
+//	g.InsertEdge(7, 8);
+//	cout << "深度优先遍历：";
+//	g.DFSTraverse(visit);
+//	cout << endl;
+//	cout << "广度优先遍历：";
+//	g.BFSTraverse(visit);
+//	cout << endl;
+//
+//	AdjListDirGraph<int> g2(g);
+//	cout << "g2深度优先遍历：";
+//	g2.DFSTraverse(visit);
+//	cout << endl;
+//	cout << "g2广度优先遍历：";
+//	g2.BFSTraverse(visit);
+//	cout << endl;
+//	
+//	g2.DeleteEdge(0, 1);
+//	g = g2;
+//	cout << "深度优先遍历：";
+//	g.DFSTraverse(visit);
+//	cout << endl;
+//	cout << "广度优先遍历：";
+//	g.BFSTraverse(visit);
+//	cout << endl;
+//
+//	system("pause");
+//	return 0;
+//}
+
+//AdjListUndirGraph test
+
 int main()
 {
-	AdjMatrixUndirNetwork<int, int> g(9);
+	AdjListUndirGraph<int> g(9);
 	for (int i = 0; i < 9; i++)
 		g.SetElem(i, i);
-	g.InsertEdge(0, 1, 1);
-	g.InsertEdge(0, 3, 1);
-	g.InsertEdge(0, 4, 1);
-	g.InsertEdge(1, 2, 1);
-	g.InsertEdge(1, 4, 1);
-	g.InsertEdge(2, 5, 1);
-	g.InsertEdge(3, 6, 1);
-	g.InsertEdge(4, 6, 1);
-	g.InsertEdge(6, 7, 1);
-	g.InsertEdge(7, 8, 1);
+	g.InsertEdge(0, 1);
+	g.InsertEdge(0, 3);
+	g.InsertEdge(0, 4);
+	g.InsertEdge(1, 2);
+	g.InsertEdge(1, 4);
+	g.InsertEdge(2, 5);
+	g.InsertEdge(3, 6);
+	g.InsertEdge(4, 6);
+	g.InsertEdge(6, 7);
+	g.InsertEdge(7, 8);
 	cout << "深度优先遍历：";
 	g.DFSTraverse(visit);
 	cout << endl;
@@ -433,7 +524,7 @@ int main()
 	g.BFSTraverse(visit);
 	cout << endl;
 
-	AdjMatrixUndirNetwork<int, int> g2(g);
+	AdjListUndirGraph<int> g2(g);
 	cout << "g2深度优先遍历：";
 	g2.DFSTraverse(visit);
 	cout << endl;

@@ -116,6 +116,9 @@
     <ClCompile Include="Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AdjListDirGraph.h" />
+    <ClInclude Include="AdjListGraphVexNode.h" />
+    <ClInclude Include="AdjListUndirGraph.h" />
     <ClInclude Include="AdjMatrixDirGraph.h" />
     <ClInclude Include="AdjMatrixDirNetwork.h" />
     <ClInclude Include="AdjMatrixUndirGraph.h" />

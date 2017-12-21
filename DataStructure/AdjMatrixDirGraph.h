@@ -1,5 +1,5 @@
 
-//有向图的领接矩阵类模板
+//有向图的邻接矩阵类模板
 
 #ifndef _ADJMATRIXDIRGRAPH_H_
 #define _ADJMATRIXDIRGRAPH_H_
@@ -206,7 +206,7 @@ AdjMatrixDirGraph<T> &AdjMatrixDirGraph<T>::operator=(const AdjMatrixDirGraph<T>
 
 template<class T>
 int AdjMatrixDirGraph<T>::FirstAdjVex(int v) const
-{//返回顶点v的第一个领接点
+{//返回顶点v的第一个邻接点
 	if (v < 0 || v >= vexNum)
 		return -1;
 	else
@@ -219,7 +219,7 @@ int AdjMatrixDirGraph<T>::FirstAdjVex(int v) const
 }
 template<class T>
 int AdjMatrixDirGraph<T>::NextAdjVex(int v1, int v2) const
-{//返回顶点v1相对于v2的下一个领接点
+{//返回顶点v1相对于v2的下一个邻接点
 	if (v1 < 0 || v1 >= vexNum || v2 < 0 || v2 >= vexNum || v1 == v2)
 		return -1;
 	else
@@ -227,7 +227,7 @@ int AdjMatrixDirGraph<T>::NextAdjVex(int v1, int v2) const
 		for (int i = v2 + 1; i < vexNum; i++)
 			if (Matrix[v1][i] == 1)
 				return i;
-		return -1;	//循环结束，不存在下一个领接点
+		return -1;	//循环结束，不存在下一个邻接点
 	}
 }
 

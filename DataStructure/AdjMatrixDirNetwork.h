@@ -1,5 +1,5 @@
 
-//有向网的领接矩阵类模板
+//有向网的邻接矩阵类模板
 
 #ifndef _ADJMATRIXDIRNETWORK_H_
 #define _ADJMATRIXDIRNETWORK_H_
@@ -224,7 +224,7 @@ AdjMatrixDirNetwork<ET, WT> &AdjMatrixDirNetwork<ET, WT>::operator=(const AdjMat
 }
 template<class ET, class WT>
 int AdjMatrixDirNetwork<ET, WT>::FirstAdjVex(int v) const
-{//返回顶点v的第一个领接点
+{//返回顶点v的第一个邻接点
 	if (v < 0 || v >= vexNum)
 		return -1;
 	else
@@ -237,7 +237,7 @@ int AdjMatrixDirNetwork<ET, WT>::FirstAdjVex(int v) const
 }
 template<class ET, class WT>
 int AdjMatrixDirNetwork<ET, WT>::NextAdjVex(int v1, int v2) const
-{//返回顶点v1相对于v2的下一个领接点
+{//返回顶点v1相对于v2的下一个邻接点
 	if (v1 < 0 || v1 >= vexNum || v2 < 0 || v2 >= vexNum || v1 == v2)
 		return -1;
 	else
@@ -245,7 +245,7 @@ int AdjMatrixDirNetwork<ET, WT>::NextAdjVex(int v1, int v2) const
 		for (int i = v2 + 1; i < vexNum; i++)
 			if (Matrix[v1][i] != infinity)
 				return i;
-		return -1;	//循环结束，不存在下一个领接点
+		return -1;	//循环结束，不存在下一个邻接点
 	}
 }
 
