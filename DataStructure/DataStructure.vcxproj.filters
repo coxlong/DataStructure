@@ -95,5 +95,14 @@
     <ClInclude Include="AdjListDirGraph.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="InThreadBinTree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadBinTreeNode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PreThreadBinTree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

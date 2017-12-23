@@ -127,8 +127,10 @@
     <ClInclude Include="BinTreeNode.h" />
     <ClInclude Include="CircLinkList.h" />
     <ClInclude Include="DblLinkList.h" />
+    <ClInclude Include="InThreadBinTree.h" />
     <ClInclude Include="LinkList.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="PreThreadBinTree.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="Rand.h" />
     <ClInclude Include="Sort.h" />
@@ -138,6 +140,7 @@
     <ClInclude Include="SqStack.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="String.h" />
+    <ClInclude Include="ThreadBinTreeNode.h" />
     <ClInclude Include="Timer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
