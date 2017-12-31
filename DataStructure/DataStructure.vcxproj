@@ -125,11 +125,13 @@
     <ClInclude Include="AdjMatrixUndirNetwork.h" />
     <ClInclude Include="BinTree.h" />
     <ClInclude Include="BinTreeNode.h" />
+    <ClInclude Include="ChildSiblingTree.h" />
     <ClInclude Include="CircLinkList.h" />
     <ClInclude Include="DblLinkList.h" />
     <ClInclude Include="InThreadBinTree.h" />
     <ClInclude Include="LinkList.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="ParentTree.h" />
     <ClInclude Include="PreThreadBinTree.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="Rand.h" />

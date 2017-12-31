@@ -104,5 +104,11 @@
     <ClInclude Include="PreThreadBinTree.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ParentTree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildSiblingTree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
